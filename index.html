@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+            background-color: rgb(1, 60, 76);
+        }
+        div{
+            height: 400px;
+            width: 280px;
+            border-radius: 20px 20px 20px 20px;
+            background-color:#004859;
+           box-shadow: 2px 2px  30px white;
+            
+        }
+        input{
+            margin-left: 8px;
+            height: 40px;
+            margin-top: 20px;
+            width: 190px;
+            font-size: 30px;
+            outline: none;
+            border: none;
+            width: 90%;
+        }
+        button{
+            margin: 13px;
+            height: 30px;
+           width: 40px;
+           border: none;
+           border-radius: 20%;
+           padding: 1px;
+           margin-left: 28px;
+            display: grid;
+            display: inline-block;
+            box-shadow:  0px 0px 2px white;
+           font-size: 20px;
+             
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="inp"><br>
+        <button onclick="clr()">AC</button>
+         <button onclick="del()">DEL</button>
+        <button onclick="dis('+')" style="background-color: lightblue;">+</button>
+        <button onclick="dis('1')">1</button>
+        <button onclick="dis('2')">2</button>
+        <button onclick="dis('-')" style="background-color: lightblue;">-</button>
+        <button onclick="dis('3')">3</button>
+        <button onclick="dis('4')">4</button>
+        <button onclick="dis('*')" style="background-color: lightblue;">*</button>
+        <button onclick="dis('5')">5</button>
+        <button onclick="dis('6')">6</button> 
+        <button onclick="dis('/')" style="background-color: lightblue;">/</button>
+        <button onclick="dis('7')">7</button>
+        <button onclick="dis('8')">8</button>
+        <button onclick="dis('.')" style="background-color: lightblue;">.</button>
+        <button onclick="dis('9')">9</button>
+        <button onclick="dis('00')">00</button>
+        <button onclick="eq()" style="background-color: orange;">=</button>
+    </div>
+
+    <script>
+        let go=document.getElementById("inp")
+        function dis(a){
+            go.value+=a
+        }
+        function clr(){
+            go.value=""
+        }
+        function eq(){
+            go.value=eval(go.value)
+        }
+        function del(){
+            go.value=slice(0,-1)
+        }
+    </script>
+</body>
+</html>
